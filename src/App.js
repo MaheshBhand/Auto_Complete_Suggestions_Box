@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ErrorBoundary from "./ErrorBoundary";
 import AutoCompleteBox from "./AutoCompleteBox";
 import "./styles.css";
 
 export default function App() {
   const [items, setItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState();
+
+  const onSelect = () => {
+    console.log("On Item Select");
+  };
 
   // API Call
   const getResponse = async () => {
@@ -24,9 +28,9 @@ export default function App() {
   return (
     <div className="App">
       <h1>Auto Complete Suggestion Box</h1>
-      <p>{JSON.stringify(selectedItem)}</p>
-      <br />
-      <AutoCompleteBox items={items} onSelect={setSelectedItem} />
+      <ErrorBoundary>
+        <AutoCompleteBox items={items} onSelect={onSelect} />
+      </ErrorBoundary>
     </div>
   );
 }
