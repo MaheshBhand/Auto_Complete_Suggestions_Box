@@ -9,8 +9,7 @@
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-scripts": "4.0.0",
-    "homepage": "https://maheshbhand.github.io/Auto_Complete_Suggestions_Box/"
+    "react-scripts": "4.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
