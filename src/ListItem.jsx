@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default ListItems = ({
+const ListItem = ({
   item,
   index,
   hideSuggestions,
@@ -15,13 +15,13 @@ export default ListItems = ({
       setText(item.name);
       onSelect(item);
     }}
-    className={cursor == index ? "active" : ""}
+    className={cursor === index ? "active" : ""}
   >
     {item.name}
   </li>
 );
 
-ListItems.propTypes = {
+ListItem.propTypes = {
   item: PropTypes.object,
   index: PropTypes.number,
   hideSuggestions: PropTypes.func,
@@ -29,3 +29,5 @@ ListItems.propTypes = {
   onSelect: PropTypes.func,
   cursor: PropTypes.number
 };
+
+export default ListItem;
