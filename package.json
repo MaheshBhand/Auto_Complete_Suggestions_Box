@@ -1,5 +1,5 @@
 {
-  "name": "auto-complete-suggestions-with-keybord-nav",
+  "name": "Auto_Complete_Suggestions-Box",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -9,13 +9,16 @@
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-scripts": "4.0.0"
+    "react-scripts": "4.0.0",
+    "homepage": "https://maheshbhand.github.io/Auto_Complete_Suggestions_Box/"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
     "typescript": "4.1.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
